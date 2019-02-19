@@ -9,22 +9,8 @@ function FriendCard(props) {
       </div>
       <div className="content">
       <button className="btn btn-primary" value={props.clicked} onClick={() => props.handleClick()}>
-          Increment
+          Shuffle
         </button>
-        <ul>
-          <li>
-            <strong>Name:</strong> {props.name}
-          </li>
-          <li>
-            <strong>Occupation:</strong> {props.occupation}
-          </li>
-          <li>
-            <strong>Location:</strong> {props.location}
-          </li>
-          <li>
-            <strong>Clicked:</strong> {props.clicked}
-          </li>
-        </ul>
       </div>
       <span onClick={() => props.removeFriend(props.id)} className="remove">
         𝘅
