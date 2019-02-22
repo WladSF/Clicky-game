@@ -1,11 +1,3 @@
-// import React, { Component } from "react";
-// import Cards from "./components/Friends";
-// import Nav from "./components/Nav";
-// import Footer from "./components/Footer";
-// import Title from "./components/Title";
-// import Wrapper from "./components/Wrapper";
-// import Characters from "./characters.jsx";
-
 import React, { Component } from 'react';
 import Footer from './components/Footer'
 import Title from './components/Title'
