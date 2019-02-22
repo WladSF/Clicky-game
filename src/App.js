@@ -1,79 +1,88 @@
-import React, { Component } from "react";
-import FriendCard from "./components/FriendCard";
-import Nav from "./components/Nav";
-import Jumbotron from "./components/Jumbotron";
-import Wrapper from "./components/Wrapper";
-import friends from "./friends.json";
+// import React, { Component } from "react";
+// import Cards from "./components/Friends";
+// import Nav from "./components/Nav";
+// import Footer from "./components/Footer";
+// import Title from "./components/Title";
+// import Wrapper from "./components/Wrapper";
+// import Characters from "./characters.jsx";
+
+import React, { Component } from 'react';
+import Footer from './components/Footer'
+import Title from './components/Title'
+import Navbar from './components/Nav'
+import Wrapper from './components/Wrapper'
+import Friends from './components/Friends'
+import Characters from './characters.jsx'
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
-  state = {
-    highest: 0, // TODO create function, pass state to child
-    score: 0, // TODO create function, pass state to child
-    clicked: false,
-    friends
-  };
-
-  removeFriend = id => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    const friends = this.state.friends.filter(friend => friend.id !== id);
-    // Set this.state.friends equal to the new friends array
-    this.setState({ friends });
-  };
-
-  shuffleArray = (array) => {
-    let i = array.length - 1;
-    for (; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      const temp = array[i];
-      array[i] = array[j];
-      array[j] = temp;
+    state = {
+        Characters,
+        clicked: [],
+        score: 0,
+        highest: 0,
+        navMessage: "Click an image to begin!"
     }
-    return array;
-  };
 
-  handleClick = (event) => {
-    // console.log()
-    if (this.state.score < this.state.highest) {
-      this.setState({ score: this.state.score + 1 });
-      this.setState.friends = this.shuffleArray(this.state.friends);
-      console.log(event);
-    } else if (this.state.score >= this.state.highest) {
-      this.setState({ score: this.state.score + 1 });
-      this.setState({ highest: this.state.highest + 1 });
-      this.setState.friends = this.shuffleArray(this.state.friends);
-      console.log(event);
+    scoreChecker = id => {
+        let character = this.state.clicked
+        if(character.length !== 0 && character.includes(id)) {
+            this.setState({
+                clicked: [],
+                score: 0,
+                navMessage: "Incorrect guess!"
+            })
+        } else {
+            character.push(id)
+            this.setState({
+                score: this.state.score += 1,
+                navMessage: "Correct!",
+                clicked: character
+            })
+            if (this.state.score > this.state.highest) {
+                this.setState({
+                    highest: this.state.score
+                })
+            }
+        }
     }
-  };
 
+    shuffleArray = array => {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            const tempStore = array[i];
+            array[i] = array[j];
+            array[j] = tempStore;
+        }
+        return array;
+    }
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
-  render() {
-    return (
-      <div>
-      <Nav 
-        highest={ this.state.highest }
-        score={ this.state.score }
-      />
-      <Jumbotron></Jumbotron>
-      <Wrapper>
-        {this.state.friends.map(friend => (
-          <FriendCard
-            handleClick={this.handleClick}
-            removeFriend={this.removeFriend}
-            id={friend.id}
-            key={friend.id}
-            name={friend.name}
-            image={friend.image}
-            occupation={friend.occupation}
-            location={friend.location}
-            clicked={this.state.clicked}
-          />
-        ))}
-      </Wrapper>
-      </div>
-    );
-  }
+    render() {
+        const shuffledCharacters = this.shuffleArray(this.state.Characters)
+        return (
+            <Wrapper>
+                <Navbar
+                    navMessage={this.state.navMessage}
+                    score={this.state.score}
+                    highest={this.state.highest}
+                />
+                <Title />
+                <div className="card-container"> 
+                    {shuffledCharacters.map(character => (
+                        <Friends
+                            score={this.state.score}
+                            highest={this.state.highest}
+                            id={character.id}
+                            key={character.key}
+                            name={character.name}
+                            image={character.image}
+                            scoreChecker={this.scoreChecker}
+                        />
+                    ))}
+                </div>
+                <Footer />
+            </Wrapper>
+        )
+    }
 }
 
-export default App;
+export default App
