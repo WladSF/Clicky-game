@@ -17,7 +17,7 @@ body {
 }
 
 .wrapper {
-  background-image:  url("./Images/wavy-dots.png");
+  background-image:  url("./images/wavy-dots.png");
   height: 100%;
   display: -ms-flexbox;
   display: flex;
@@ -44,7 +44,7 @@ body {
   width: 99%;
   margin-top: 0px;
   /* background:linear-gradient(to top, #00ffff 0%, #0033cc 100%) ; */
-  background-image: url("./Images/wallpaper.jpg");
+  background-image: url("./images/wallpaper.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -168,7 +168,7 @@ footer {
 
 .header {
   /* background: linear-gradient(to bottom, #33ccff 0%, #33cc33 100%); */
-  background-image: url("./Images/wallpaper.jpg");
+  background-image: url("./images/wallpaper.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
