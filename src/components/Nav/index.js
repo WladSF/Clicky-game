@@ -5,7 +5,7 @@ class Navbar extends Component {
         return(
             <nav className="navbar">
                 <div>
-                    <a className="logo" href="/">Cartoon Memory Game</a>
+                    <a className="logo" href="/">Reset</a>
                 </div>
                 <div className="navMessage">{this.props.navMessage}</div>
                 <div className="score">

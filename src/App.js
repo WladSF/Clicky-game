@@ -3,7 +3,7 @@ import Footer from './components/Footer'
 import Title from './components/Title'
 import Navbar from './components/Nav'
 import Wrapper from './components/Wrapper'
-import Friends from './components/Friends'
+import Cards from './components/Cards'
 import Characters from './characters.jsx'
 
 class App extends Component {
@@ -60,7 +60,7 @@ class App extends Component {
                 <Title />
                 <div className="card-container"> 
                     {shuffledCharacters.map(character => (
-                        <Friends
+                        <Cards
                             score={this.state.score}
                             highest={this.state.highest}
                             id={character.id}
