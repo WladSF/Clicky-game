@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 
+
 class Cards extends Component {
+    
     render() {
+        console.log(this.props.image);
         return(
             <div 
                 className="card" 

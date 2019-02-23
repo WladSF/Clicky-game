@@ -5,7 +5,7 @@ class Title extends Component {
         return(
             <header className="header">
                 <h1>Cartoon memory game</h1>
-                <h2>Don't click the same image twice and you'll win points!</h2>
+                <h2>Don't click the same image twice or you'll lose!</h2>
             </header>
         )
     }
