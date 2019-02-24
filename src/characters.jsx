@@ -2,8 +2,8 @@ const Characters = [
   {
       id: 1,
       key: 1,
-    //   name: "Bart",
-      image: "./Images/Bart.jpg"
+    //   name: "garfield",
+      image: "./Images/garfield.jpg"
   },
   {
       id: 2,
@@ -27,7 +27,7 @@ const Characters = [
       id: 5,
       key: 5,
     //   name: "Simpsons",
-      image: "./Images/Simpsons3.jpg"
+      image: "./Images/patrick.jpg"
   },
   {
       id: 6,
@@ -38,8 +38,8 @@ const Characters = [
   {
       id: 7,
       key: 7,
-    //   name: "Futurama",
-      image: "./Images/Futurama2.jpg"
+    //   name: "Odie",
+      image: "./Images/odie.jpg"
   },
   {
       id: 8,
@@ -51,7 +51,7 @@ const Characters = [
       id: 9,
       key: 9,
     //   name: "Simpsons",
-      image: "./Images/Simpsons2.jpg"
+      image: "./Images/scooby.jpg"
   },
   {
       id: 10,
@@ -74,14 +74,14 @@ const Characters = [
   {
       id: 13,
       key: 13,
-    //   name: "Futurama",
-      image: "./Images/Futurama5.jpg"
+    //   name: "Sponge Bob",
+      image: "./Images/spongebob.jpg"
   },
   {
       id: 14,
       key: 14,
     //   name: "Stimpy",
-      image: "./Images/Stimpy.jpg"
+      image: "./Images/spongebob2.jpg"
   },
   {
       id: 15,
