@@ -12,7 +12,7 @@ class App extends Component {
         clicked: [],
         score: 0,
         highest: 0,
-        navMessage: "Click an image to begin!"
+        navMessage: "Click an image to begin"
     }
 
     scoreChecker = id => {
