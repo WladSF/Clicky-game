@@ -14,7 +14,7 @@ Through the use of React, the main elements used in this app are:
 - Event handling
 - JSX
 
-<img src="./public/Images/Readme1.png" width = "100"
+<img src="./public/Images/Readme1.png" width = "100">
 
 
 
