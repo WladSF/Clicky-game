@@ -16,7 +16,7 @@ Through the use of React, the main elements used in this app are:
 
 The application's UI is broken into components where their states can be managed and respond to user events. 
 
-## Features : 
+## Features 
 
 - Rendering of different images to the screen, where each image listens for click events 
 - Track of user's score and highest score 
