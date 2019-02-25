@@ -14,6 +14,15 @@ Through the use of React, the main elements used in this app are:
 - Event handling
 - JSX
 
+The application's UI is broken into components where their states can be managed and respond to user events. 
+
+## Features : 
+
+- Rendering of different images to the screen, where each image listens for click events 
+- Track of user's score and highest score 
+- Image shuffling 
+- App deployed on Heroku
+
 <img src="./public/Images/Readme1.png">
 <br>
 <br>
