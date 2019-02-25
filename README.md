@@ -17,10 +17,10 @@ Through the use of React, the main elements used in this app are:
 <img src="./public/Images/Readme1.png">
 <br>
 <br>
-<img src="./public/Images/Readme2.png">
-<br>
-<br>
 <img src="./public/Images/Readme3.png">
+<br>
+<br>
+<img src="./public/Images/Readme2.png">
 
 
 
